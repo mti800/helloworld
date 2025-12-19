@@ -1,38 +1,45 @@
 ---
+import '../styles/global.css';
 const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title}</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            color: #333;
-        }
-        h1, h2, h3 { color: #111; }
-        code {
-            background: #f4f4f4;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 1em;
-            overflow-x: auto;
-            border-radius: 5px;
-        }
-        a { color: #0066cc; }
-        img { max-width: 100%; height: auto; }
-    </style>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/helloworld/favicon.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
 </head>
+
 <body>
+  <header>
+    <img 
+      class="header-gif"
+      src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2gxdGQyazFpaDFobDQ4aDltY3VteHc2ZjVoNGZjZmNnczk1dDVhOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U4FkC2VqpeNRHjTDQ5/giphy.gif" 
+      alt="internet"
+    />
+    <nav>
+      <a href="/helloworld">Hello World</a>
+      <a href="/helloworld/guia-aim">Guía Aim 🎯</a>
+      <a href="/helloworld/conceptos">Conceptos</a>
+    </nav>
+    <img 
+      class="header-gif"
+      src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXl0bDB3Z3lkZDZpODNyemlnZjg2aG81dG5ld3M3OHM1Z3NvM2trbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TPl5N4Ci49ZQY/giphy.gif" 
+      alt="pensando"
+    />
+  </header>
+  <main>
     <slot />
+  </main>
+  <footer>
+    Matias 2025 
+        <img 
+      class="header-gif"
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXd4MHl0ZHRmanZkeDYxNmx6cmE2eWtza3Uyd3k5OG5ncm5yYWZmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dRcb3xrnZJQmPVnY2W/giphy.gif"
+      alt="pensando"
+    />
+  </footer>
 </body>
 </html>
